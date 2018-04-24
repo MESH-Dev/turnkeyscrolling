@@ -148,7 +148,6 @@ var footerScene = new ScrollMagic.Scene({triggerElement: ".site-footer", trigger
 for (var i = 0; i < navItems.length; i++) {
    var refLink = navItems[i].href.split('#')[1];
    var refElement = document.getElementById(refLink);
-   console.log(navItems);
    var refHeight = refElement.getBoundingClientRect().height;
    new ScrollMagic.Scene({triggerElement: refElement, duration: refHeight})
             .setClassToggle(navItems[i], "active") // add class toggle
