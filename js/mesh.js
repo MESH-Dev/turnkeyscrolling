@@ -18,7 +18,7 @@ var welcomeAnim = new TimelineMax(),
    welcomeDesc = document.getElementById('welcomeDesc'),
    scrollLink = document.getElementById('scrollLink'),
    mainPanels = document.getElementsByClassName('panel'),
-   navItems =  document.getElementById('main-nav').getElementsByTagName('a'),
+   navItems =  document.getElementById('main-nav').getElementsByTagName('ul')[0].getElementsByTagName('a'),
    introPanels = document.getElementsByClassName('panel intro'),
    cardPanels = document.getElementsByClassName('panel cards'),
    textPanels = document.getElementsByClassName('panel wysiwyg'),
@@ -148,6 +148,7 @@ var footerScene = new ScrollMagic.Scene({triggerElement: ".site-footer", trigger
 for (var i = 0; i < navItems.length; i++) {
    var refLink = navItems[i].href.split('#')[1];
    var refElement = document.getElementById(refLink);
+   console.log(navItems);
    var refHeight = refElement.getBoundingClientRect().height;
    new ScrollMagic.Scene({triggerElement: refElement, duration: refHeight})
             .setClassToggle(navItems[i], "active") // add class toggle
