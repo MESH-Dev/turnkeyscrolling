@@ -155,7 +155,10 @@
 			background-color: <?php echo $primary_color; ?>;
 		}
 		input[type="submit"]:hover{
-			color: <?php echo $primary_color; ?>
+			color: <?php echo $primary_color; ?>;
+		}
+		.panel.wysiwyg a{
+			color: <?php echo $tertiary_color; ?>;
 		}
 	</style>
 
