@@ -154,7 +154,7 @@
 		.main-navigation ul{
 			background-color: <?php echo $primary_color; ?>;
 		}
-		input[type="submit"]:hover{
+		input[type="submit"]{
 			color: <?php echo $primary_color; ?>;
 		}
 		.panel.wysiwyg a{
