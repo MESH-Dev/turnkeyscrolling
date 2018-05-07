@@ -154,18 +154,19 @@
       }
       blockquote{
          // font-family: $av-italic;
-         font-style: italic;
          letter-spacing: 0.4px;
          border-left: 1px solid $grey;
          padding-left: 10px;
          //font-family: $primary_font;
          font-weight: 400;
          font-style: italic;
+         font-size: 2rem;
          p{
             // font-family: $av-italic;
             //font-family: $primary_font;
             font-weight: 400;
             font-style: italic;
+            font-size: 2rem;
          }
       }
       ul li{
