@@ -999,6 +999,11 @@ header {
 }
 
 /* line 75, sass/modules/_header.scss */
+.sub-menu {
+  display: none;
+}
+
+/* line 79, sass/modules/_header.scss */
 #mobileMenuTrigger {
   display: inline-block;
   line-height: 64px;
@@ -1009,7 +1014,7 @@ header {
   cursor: pointer;
   font-weight: 800;
 }
-/* line 86, sass/modules/_header.scss */
+/* line 90, sass/modules/_header.scss */
 #mobileMenuTrigger:hover {
   text-decoration: none;
 }
