@@ -13,7 +13,9 @@
 
 	if (!empty($bg_url)) { ?>
 		<div class="welcome-gate" id="top">
-			<div class="hero" style="background-image:url('<?php echo $bg_url ?>')"></div>
+			<div class="hero" style="
+			<?php if ($bg_filter == false): echo 'filter:none;'; endif; ?>
+			background-image:url('<?php echo $bg_url ?>');"></div>
 			<div class="img-filter" <?php if ($bg_filter): ?> style="background-color:<?php echo $primary_color ?>;"<?php endif; ?>></div>
 	<?php } else{ ?>
 		<div class="welcome-gate" id="top" style="background:<?php echo $primary_color ?>;">
