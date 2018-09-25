@@ -862,6 +862,25 @@
                 "max_height": "",
                 "max_size": "",
                 "mime_types": ""
+            },
+            {
+                "key": "field_5baa899215736",
+                "label": "Backgorund Image Filter",
+                "name": "bg_img_filter",
+                "type": "true_false",
+                "instructions": "If you entered a background image for the welcome gate, choose whether it should have a transparent filter over it that matches the primary color of your color scheme. This will make the welcome gate text more legible and will keep site design consistent. Default is ON. Only turn this off if it obscures important aspects of the background photo or if you plan to not use text.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 1,
+                "ui": 1,
+                "ui_on_text": "On",
+                "ui_off_text": "Off"
             }
         ],
         "location": [
