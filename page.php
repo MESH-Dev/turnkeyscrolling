@@ -5,7 +5,6 @@
 	$bg_img = get_field('background_image');
 	$bg_url = $bg_img['url'];
 	$bg_filter = get_field('bg_img_filter');
-	var_dump($bg_filter);
 
 	$primary_color = get_field('primary_color', 'option');
 		$secondary_color = get_field('secondary_color', 'option');
