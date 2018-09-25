@@ -3,7 +3,7 @@
 <main id="content">
 	<?php
 	$bg_img = get_field('background_image');
-	$bg_url = $bg_img['sizes']['background-fullscreen'];
+	$bg_url = $bg_img['url'];
 
 	$primary_color = get_field('primary_color', 'option');
 		$secondary_color = get_field('secondary_color', 'option');
