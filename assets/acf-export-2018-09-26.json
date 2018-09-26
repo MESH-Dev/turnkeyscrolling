@@ -389,7 +389,7 @@
             },
             {
                 "key": "field_5babf3503f0ca",
-                "label": "Custom Color On or Off",
+                "label": "Custom Footer Color On or Off",
                 "name": "custom_color_on_or_off",
                 "type": "true_false",
                 "instructions": "Do you want to use a custom color for the footer, different from the colors in your scheme? If so, turn it on here.",
@@ -417,6 +417,48 @@
                     [
                         {
                             "field": "field_5babf3503f0ca",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": ""
+            },
+            {
+                "key": "field_5bac132dbd9ce",
+                "label": "Custom Nav Color On or Off",
+                "name": "custom_nav_color_on_or_off",
+                "type": "true_false",
+                "instructions": "If you would like to use a custom color for your site navigation, first turn this on.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 1,
+                "ui_on_text": "On",
+                "ui_off_text": "Off"
+            },
+            {
+                "key": "field_5bac1359bd9cf",
+                "label": "Custom Nav Color",
+                "name": "custom_nav_color",
+                "type": "color_picker",
+                "instructions": "After turning custom nav color on, enter your custom nav color here.",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5bac132dbd9ce",
                             "operator": "==",
                             "value": "1"
                         }
@@ -974,6 +1016,48 @@
                 "ui": 1,
                 "ui_on_text": "On",
                 "ui_off_text": "Off"
+            },
+            {
+                "key": "field_5bac110683ebd",
+                "label": "Welcome Gate Custom Color On or Off",
+                "name": "welcome_gate_custom_color_on_or_off",
+                "type": "true_false",
+                "instructions": "To use a custom color for the welcome gate, first turn this on.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 1,
+                "ui_on_text": "On",
+                "ui_off_text": "Off"
+            },
+            {
+                "key": "field_5bac113483ebe",
+                "label": "Welcome Gate Custom Color",
+                "name": "welcome_gate_custom_color",
+                "type": "color_picker",
+                "instructions": "After turning on custom color, enter your custom welcome gate color here.",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5bac110683ebd",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": ""
             }
         ],
         "location": [

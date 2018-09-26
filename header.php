@@ -169,8 +169,10 @@
 <body <?php body_class(); ?>>
 	<?php
 	$primary_color = get_field('primary_color', 'option');
+	$nav_color_switch = get_field('custom_nav_color_on_or_off', 'option');
+	$custom_nav_color = get_field('custom_nav_color', 'option');
 	?>
-	<header style="background:<?php echo $primary_color ?>">
+	<header style="background:<?php if($nav_color_switch){echo $custom_nav_color;}else{echo $primary_color;};?>">
 		<div class="container">
 			<div class="row">
 				<div class="columns-12">
@@ -178,6 +180,11 @@
 						<img src="<?php echo $logo_url ?>" alt="">
 					</a>
 					<nav id="main-nav" class="main-navigation">
+						<style media="screen">
+							.main-navigation ul{
+								background-color: <?php if($nav_color_switch){echo $custom_nav_color;}else{echo $primary_color;};?>;
+							}
+						</style>
 						<?php if(has_nav_menu('main_nav')){
 									$defaults = array(
 										'theme_location'  => 'main_nav',

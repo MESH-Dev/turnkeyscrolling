@@ -5,6 +5,8 @@
 	$bg_img = get_field('background_image');
 	$bg_url = $bg_img['url'];
 	$bg_filter = get_field('bg_img_filter');
+	$welcome_color_switch = get_field('welcome_gate_custom_color_on_or_off');
+	$welcome_color = get_field('welcome_gate_custom_color');
 
 	$primary_color = get_field('primary_color', 'option');
 		$secondary_color = get_field('secondary_color', 'option');
@@ -15,9 +17,9 @@
 			<div class="hero" style="
 			<?php if ($bg_filter == false): echo 'filter:none;'; endif; ?>
 			background-image:url('<?php echo $bg_url ?>');"></div>
-			<div class="img-filter" <?php if ($bg_filter): ?> style="background-color:<?php echo $primary_color ?>;"<?php endif; ?>></div>
+			<div class="img-filter" <?php if ($bg_filter): ?> style="background-color:<?php if($welcome_color_switch){echo $welcome_color;}else{echo $primary_color;};?>;"<?php endif; ?>></div>
 	<?php } else{ ?>
-		<div class="welcome-gate" id="top" style="background:<?php echo $primary_color ?>;">
+		<div class="welcome-gate" id="top" style="background:<?php if($welcome_color_switch){echo $welcome_color;}else{echo $primary_color;};?>;">
 	<?php }; ?>
 		<div class="container">
 			<div class="row">
