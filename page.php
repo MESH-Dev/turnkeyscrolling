@@ -21,9 +21,17 @@
 	<?php }; ?>
 		<div class="container">
 			<div class="row">
-				<div class="sign sf">
+				<?php
+				$logo_graphic = get_field('logo_graphic');
+				$graphic_url = $logo_graphic['url'];
+				?>
+				<div class="sign sf" style="<?php if(!empty($logo_graphic)){ echo 'max-width:unset;'; }; ?>">
+				<?php if(!empty($logo_graphic)){ ?>
+					<img id="welcomeGraphic" src="<?php echo $graphic_url; ?>" alt="Logo graphic">
+				<?php }else{?>
 					<h1 id="welcomeTitle" class="pf"><?php the_field('statement'); ?></h1>
 					<p id="welcomeDesc" class="sf"><?php the_field('main_blurb'); ?></p>
+				<?php }; ?>
 				</div>
 			</div>
 		</div>
@@ -66,6 +74,7 @@
 			} elseif($panel_type == 'cards'){
 				$panel_bg = get_sub_field('panel_background_image');
 				$panel_bg_url = $panel_bg['sizes']['background-fullscreen'];
+				$cards_title = get_sub_field('cards_panel_title');
 				if (!empty($panel_bg_url)) { ?>
 					<div class="panel <?php the_sub_field('panel_type'); ?>" id="<?php the_sub_field('panel_id'); ?>">
 						<div class="hero" style="background-image:url('<?php echo $panel_bg_url ?>')"></div>
@@ -75,14 +84,22 @@
 				<?php }; ?>
 					<div class="container">
 						<div class="row">
+							<?php if (!empty($cards_title)) { ?>
+								<div class="cards-panel-title">
+									<p class="pf"><?php the_sub_field('cards_panel_title'); ?></p>
+								</div>
+							<?php }?>
 							<?php
 							$cards = get_sub_field('cards');
 							$card_num = count($cards);
 							$width_class = '';
+							$text_max = '';
 							if ($card_num == 1) {
 								$width_class = 'columns-12';
+								$text_max = 'max-width:400px;';
 							} elseif ($card_num == 2) {
 								$width_class = 'columns-6';
+								$text_max = 'max-width:400px;';
 							} elseif ($card_num == 3) {
 								$width_class = 'columns-4';
 							} elseif ($card_num == 4) {
@@ -98,7 +115,7 @@
 									?>
 									<a <?php if(!empty($card_link)){ ?> href="<?php echo $card_link ?>" <?php }; ?>>
 										<img src="<?php echo $card_img_url ?>" alt="">
-										<div class="text">
+										<div class="text" style="<?php echo $text_max; ?>">
 											<h3 class="pf"><?php the_sub_field('card_title'); ?></h3>
 											<p class="sf"><?php the_sub_field('card_blurb'); ?></p>
 										</div>
