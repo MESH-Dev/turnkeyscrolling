@@ -386,6 +386,48 @@
                 "prepend": "",
                 "append": "",
                 "maxlength": ""
+            },
+            {
+                "key": "field_5babf3503f0ca",
+                "label": "Custom Color On or Off",
+                "name": "custom_color_on_or_off",
+                "type": "true_false",
+                "instructions": "Do you want to use a custom color for the footer, different from the colors in your scheme? If so, turn it on here.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 1,
+                "ui_on_text": "On",
+                "ui_off_text": "Off"
+            },
+            {
+                "key": "field_5babedaa76655",
+                "label": "Custom Footer Color",
+                "name": "custom_footer_color",
+                "type": "color_picker",
+                "instructions": "If you want your footer to be a custom color, enter the custom color here.",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5babf3503f0ca",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": ""
             }
         ],
         "location": [
@@ -617,6 +659,33 @@
                         "mime_types": ""
                     },
                     {
+                        "key": "field_5babdc6332ef6",
+                        "label": "Panel Title (Optional)",
+                        "name": "cards_panel_title",
+                        "type": "text",
+                        "instructions": "Enter text to be used as this panel's title, displayed centered above the cards.",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_5ab2c53528bb1",
+                                    "operator": "==",
+                                    "value": "cards"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
                         "key": "field_5ab2bfd2ba782",
                         "label": "Cards Panel",
                         "name": "cards",
@@ -838,6 +907,30 @@
                 "prepend": "",
                 "append": "",
                 "maxlength": 600
+            },
+            {
+                "key": "field_5babf65f842eb",
+                "label": "Logo Graphic",
+                "name": "logo_graphic",
+                "type": "image",
+                "instructions": "To use a logo graphic in the welcome gate instead of text, enter an image from your media library here. To switch back to text, clear the image entered here. It is recommended to not use an image wider than 1200px or taller than 500px.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
             },
             {
                 "key": "field_5ab3d6907b871",
