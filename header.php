@@ -32,7 +32,6 @@
 		$font_select = get_field('font_pairing', 'option');
 		if ($font_select == 1) {
 			echo '<link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">';
-			//echo '<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700" rel="stylesheet">';
 			$sf_css = "font-family: 'Karla', sans-serif; font-weight:400 !important;";
 			$pf_css = "font-family: 'Karla', sans-serif; font-weight:700 !important;";
 		} elseif($font_select == 2){
@@ -55,15 +54,13 @@
 			$sf_css = "font-family: 'Cabin', sans-serif;";
 			$pf_css = "font-family: 'Abril Fatface', cursive;";
 		} elseif ($font_select == 6) {
-			echo '<link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">';
-			echo '<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">';
+			echo '<link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Bitter:400,400i,700" rel="stylesheet">';
 			$sf_css = "font-family: 'Bitter', serif;";
-			$pf_css = "font-family: 'Abril Fatface', cursive;";
+			$pf_css = "font-family: 'Alfa Slab One', serif; font-weight:normal !important;";
 		} else {
-			echo '<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">';
-			echo '<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700" rel="stylesheet">';
-			$sf_css = "font-family: 'Nunito Sans', sans-serif;";
-			$pf_css = "font-family: 'Merriweather', serif;";
+			echo '<link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">';
+			$sf_css = "font-family: 'Karla', sans-serif; font-weight:400 !important;";
+			$pf_css = "font-family: 'Karla', sans-serif; font-weight:700 !important;";
 		};
 
 		// $primary_font = get_field('primary_font_code', 'option');
@@ -107,6 +104,7 @@
 		.panel.wysiwyg blockquote p,
 		.panel.wysiwyg,
 		.main-navigation,
+		.main-navigation ul li a,
 		input,
 		textarea{
 			<?php echo $pf_css;?>
