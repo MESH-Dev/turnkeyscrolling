@@ -145,23 +145,48 @@
 	?>
 
 	<style>
-		p.cta{
-			background-color:<?php echo $tertiary_color; ?>;
-		}
-		p.cta:hover,
-		p.cta:active,
-		p.cta:focus{
-			color: <?php echo $tertiary_color; ?> !important;
-		}
-		.main-navigation ul{
-			background-color: <?php echo $primary_color; ?>;
-		}
-		input[type="submit"]{
-			color: <?php echo $primary_color; ?>;
-		}
-		.panel.wysiwyg a{
-			color: <?php echo $tertiary_color; ?>;
-		}
+	p.cta{
+		/* background-color:<//?php echo $tertiary_color; ?>; */
+		color: <?php echo $secondary_color; ?> !important;
+	}
+	p.cta:hover,
+	p.cta:active,
+	p.cta:focus{
+		/* color: <//?php echo $tertiary_color; ?> !important; */
+	}
+	.main-navigation ul{
+		background-color: <?php echo $primary_color; ?>;
+	}
+	input[type="submit"]{
+		color: <?php echo $secondary_color; ?>;
+	}
+	.panel.wysiwyg a{
+		color: <?php echo $tertiary_color; ?>;
+	}
+	.panel.wysiwyg h1{
+		color: <?php echo $primary_color; ?>;
+	}
+	.panel.wysiwyg h2{
+		color: <?php echo $secondary_color; ?>;
+	}
+	.panel.wysiwyg h3{
+		color: <?php echo $tertiary_color; ?>;
+	}
+	.panel.wysiwyg h4{
+		color: <?php echo $primary_color; ?>;
+	}
+	.panel.wysiwyg h5{
+		color: <?php echo $tertiary_color; ?>;
+	}
+	.panel.wysiwyg h6{
+		color: #505050;
+	}
+	.listing-card h4{
+		color: <?php echo $primary_color; ?>;
+	}
+	.listing-card a{
+		color: <?php echo $secondary_color; ?>;
+	}
 	</style>
 
 	<?php wp_head(); ?>
