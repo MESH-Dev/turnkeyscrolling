@@ -136,7 +136,7 @@
 							$col_count = count($columns);
 							$col_class = '';
 							if($col_count == 1){
-								$col_class = 'columns-12';
+								$col_class = 'columns-10 offset-by-1';
 							} elseif($col_count == 2){
 								$col_class = 'columns-6';
 							};

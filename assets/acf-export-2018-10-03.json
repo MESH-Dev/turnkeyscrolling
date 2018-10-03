@@ -249,12 +249,12 @@
                     "id": ""
                 },
                 "choices": {
-                    "1": "Nunito Sans and Merriweather",
-                    "2": "Montserrat and Playfair Display",
-                    "3": "Ubuntu and Zilla Slab",
-                    "4": "IBM Plex Serif and Merriweather",
-                    "5": "Muli and Raleway",
-                    "6": "Zilla Slab and Open Sans"
+                    "1": "Karla Bold and Karla Regular",
+                    "2": "Quando and Karla",
+                    "3": "Abel and Karla",
+                    "4": "Noto Serif Black and Noto Serif Light",
+                    "5": "Abril Fatface and Cabin",
+                    "6": "Alfa Slab and Bitter"
                 },
                 "default_value": [
                     1
@@ -262,8 +262,8 @@
                 "allow_null": 0,
                 "multiple": 0,
                 "ui": 0,
-                "ajax": 0,
                 "return_format": "value",
+                "ajax": 0,
                 "placeholder": ""
             },
             {
@@ -801,8 +801,8 @@
                                 "key": "field_5ab2c021ba785",
                                 "label": "Card Blurb",
                                 "name": "card_blurb",
-                                "type": "text",
-                                "instructions": "Enter a blurb, or description text, for this card. This text should be relevant to the card's other content, including its image and title. Text is limited to 265 characters including spaces.",
+                                "type": "textarea",
+                                "instructions": "Enter a blurb, or description text, for this card. This text should be relevant to the card's other content, including its image and title. Text is recommended to be 265 characters or less including spaces.",
                                 "required": 0,
                                 "conditional_logic": 0,
                                 "wrapper": {
@@ -812,9 +812,9 @@
                                 },
                                 "default_value": "",
                                 "placeholder": "",
-                                "prepend": "",
-                                "append": "",
-                                "maxlength": 265
+                                "maxlength": "",
+                                "rows": 2,
+                                "new_lines": ""
                             },
                             {
                                 "key": "field_5ab2c02cba786",

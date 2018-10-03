@@ -46,8 +46,8 @@
 			$pf_css = "font-family: 'Abel', sans-serif;";
 		} elseif($font_select == 4){
 			echo '<link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR:300,400" rel="stylesheet">';
-			$sf_css = "font-family: 'Noto Serif KR', sans-serif; font-weight:300 !important;;";
-			$pf_css = "font-family: 'Noto Serif KR', sans-serif; font-weight:400 !important;;";
+			$sf_css = "font-family: 'Noto Serif KR', sans-serif; font-weight:300 !important;";
+			$pf_css = "font-family: 'Noto Serif KR', sans-serif; font-weight:900 !important;";
 		} elseif ($font_select == 5) {
 			echo '<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">';
 			echo '<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">';
@@ -104,6 +104,8 @@
 		.panel.wysiwyg blockquote p,
 		.panel.wysiwyg,
 		.main-navigation,
+		#mobileMenuTrigger,
+		footer .contact-media p,
 		.main-navigation ul li a,
 		input,
 		textarea{
@@ -140,25 +142,36 @@
 	<?php
 		$primary_color = get_field('primary_color', 'option');
 		$secondary_color = get_field('secondary_color', 'option');
-		$tertiary_color = get_field('tertiary_color', 'options');
-
+		$tertiary_color = get_field('tertiary_color', 'option');
+		$custom_color_switch = get_field('custom_color_on_or_off', 'option');
+		$custom_footer_color = get_field('custom_footer_color', 'option');
 	?>
 
 	<style>
 	p.cta{
 		/* background-color:<//?php echo $tertiary_color; ?>; */
-		color: <?php echo $secondary_color; ?> !important;
+		/* color: <//?php echo $secondary_color; ?>; */
 	}
-	p.cta:hover,
+	.panel.intro p.cta{
+		/* color: <//?php echo $secondary_color ?>; */
+		background-color: <?php echo $tertiary_color; ?>;
+	}
+	.panel.intro p.cta:hover,
+	.panel.intro p.cta:active,
+	.panel.intro p.cta:focus{
+		color: <?php echo $tertiary_color; ?>;
+	}
+	/* p.cta:hover,
 	p.cta:active,
 	p.cta:focus{
-		/* color: <//?php echo $tertiary_color; ?> !important; */
-	}
+		color: <//?php echo $tertiary_color; ?> !important;
+	} */
 	.main-navigation ul{
 		background-color: <?php echo $primary_color; ?>;
 	}
 	input[type="submit"]{
-		color: <?php echo $secondary_color; ?>;
+		color: <?php if($custom_color_switch){echo $custom_footer_color;}else{echo $primary_color;};?>;
+		/* color: <//?php echo $secondary_color; ?>; */
 	}
 	.panel.wysiwyg a{
 		color: <?php echo $tertiary_color; ?>;
