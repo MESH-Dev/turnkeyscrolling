@@ -271,7 +271,7 @@
                 "label": "Primary Color",
                 "name": "primary_color",
                 "type": "color_picker",
-                "instructions": "Enter the site's primary color. This color will be used for major components such as the navigation, footer, and welcome gate panel. Once this is entered correctly, it is recommended to make no changes.",
+                "instructions": "Enter the site's primary color. This color will be used for major components such as the navigation, footer, and welcome gate panel as well as Heading 1 and Heading 4 text. Once this is entered correctly, it is recommended to make no changes.",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -286,7 +286,7 @@
                 "label": "Secondary Color",
                 "name": "secondary_color",
                 "type": "color_picker",
-                "instructions": "Enter the site's secondary color. This color will be used for secondary components such as icon panels. Once this is entered correctly, it is recommended to make no changes.",
+                "instructions": "Enter the site's secondary color. This color will be used for secondary components such as cards panel backgrounds, cards panel background image filter, and Heading 2 text. Once this is entered correctly, it is recommended to make no changes.",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -301,7 +301,7 @@
                 "label": "Tertiary Color",
                 "name": "tertiary_color",
                 "type": "color_picker",
-                "instructions": "Enter the site's tertiary color. This color will be used for links and buttons in the intro or text panels. Once this is entered correctly, it is recommended to make no changes.",
+                "instructions": "Enter the site's tertiary color. This color will be used for links and buttons in the intro or text panels, as well as Heading 3 text and Heading 5 text. Once this is entered correctly, it is recommended to make no changes.",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
