@@ -103,12 +103,13 @@ jQuery(document).ready(function($){
 
          //Define Animations
          introPanelAnim.set(theBlurb, {css:{transform:"translateY(30px)", opacity:0}})
-            .set(theCTA, {css:{opacity:0}})
             .set(theDesc, {css:{transform:"translateX(30px)", opacity:0}})
             .to(theBlurb, 0.5, {css:{transform:"translateY(0px)", opacity:1}, ease: Power2.easeInOut})
-            .to(theDesc, 0.4, {css:{transform:"translateX(0px)", opacity:1}, ease: Power2.easeInOut, delay: -0.2})
-            .to(theCTA, 0.25, {css:{opacity:1}, ease: Power2.easeInOut, delay: -0.1});
-
+            .to(theDesc, 0.4, {css:{transform:"translateX(0px)", opacity:1}, ease: Power2.easeInOut, delay: -0.2});
+            if (theCTA) {
+               introPanelAnim.from(theCTA, 0.25, {css:{opacity:0}, ease: Power2.easeInOut, delay: -0.1});
+               // .to(theCTA, 0.25, {css:{opacity:1}, ease: Power2.easeInOut, delay: -0.1});
+            }
          //Trigger Animations
          var introScene = new ScrollMagic.Scene({triggerElement: introPanels[i], reverse: false})
             .setTween(introPanelAnim)
