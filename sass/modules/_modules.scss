@@ -321,6 +321,17 @@
       max-width: 255px;
       margin: 0 auto;
    }
+   &.nohover{
+      a{
+         &:hover{
+            img{
+               -webkit-transform: none;
+               -ms-transform: none;
+               transform: none;
+            }
+         }
+      }
+   }
    a{
       color: $white;
       &:hover{

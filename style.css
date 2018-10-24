@@ -1513,34 +1513,40 @@ footer form p {
   max-width: 255px;
   margin: 0 auto;
 }
-/* line 324, sass/modules/_modules.scss */
+/* line 327, sass/modules/_modules.scss */
+.card.nohover a:hover img {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+/* line 335, sass/modules/_modules.scss */
 .card a {
   color: #FFFFFF;
 }
-/* line 326, sass/modules/_modules.scss */
+/* line 337, sass/modules/_modules.scss */
 .card a:hover {
   text-decoration: none;
 }
-/* line 328, sass/modules/_modules.scss */
+/* line 339, sass/modules/_modules.scss */
 .card a:hover img {
   -webkit-transform: translateY(-8px);
   -ms-transform: translateY(-8px);
   transform: translateY(-8px);
 }
-/* line 335, sass/modules/_modules.scss */
+/* line 346, sass/modules/_modules.scss */
 .card h3 {
   font-size: 3.2rem;
   letter-spacing: 1px;
   font-weight: 600;
 }
-/* line 342, sass/modules/_modules.scss */
+/* line 353, sass/modules/_modules.scss */
 .card p {
   color: #FFFFFF;
   font-weight: 200;
   font-size: 1.6rem;
   letter-spacing: 0.47px;
 }
-/* line 350, sass/modules/_modules.scss */
+/* line 361, sass/modules/_modules.scss */
 .card img {
   transition: transform 0.2s ease-in-out;
   max-height: 140px;
@@ -1548,7 +1554,7 @@ footer form p {
   margin-bottom: 2rem;
 }
 
-/* line 358, sass/modules/_modules.scss */
+/* line 369, sass/modules/_modules.scss */
 .clearfix {
   clear: both;
 }
